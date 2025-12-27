@@ -34,3 +34,28 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+# Inventory Visibility Frontend
+
+This is a Next.js dashboard that visualizes inventory analytics from the backend.
+
+## Features
+- Displays total SKUs
+- Shows low stock items
+- Shows dead stock items
+
+## Architecture
+- All analytics are computed server-side
+- Frontend is stateless and consumes APIs
+
+## Tech Stack
+- Next.js
+- React Hooks
+- Deployed on Vercel
+
+## Backend URL
+https://inventory-visibility-backend.onrender.com
+
+## Live URL
+https://inventory-visibility-frontend.vercel.app
