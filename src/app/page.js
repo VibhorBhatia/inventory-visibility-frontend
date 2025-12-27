@@ -2,20 +2,22 @@
 import { useEffect, useState } from "react";
 
 export default function Dashboard() {
+  const API_BASE = "https://inventory-visibility-backend.onrender.com";
+
   const [inventory, setInventory] = useState([]);
   const [deadStock, setDeadStock] = useState([]);
   const [lowStock, setLowStock] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:4000/inventory")
+    fetch(`${API_BASE}/inventory`)
       .then(res => res.json())
       .then(setInventory);
 
-    fetch("http://localhost:4000/analytics/dead-stock")
+    fetch(`${API_BASE}/analytics/dead-stock`)
       .then(res => res.json())
       .then(setDeadStock);
 
-    fetch("http://localhost:4000/analytics/low-stock")
+    fetch(`${API_BASE}/analytics/low-stock`)
       .then(res => res.json())
       .then(setLowStock);
   }, []);
